@@ -83,7 +83,7 @@ class NyxPrinterModule(private val reactContext: ReactApplicationContext) :
   private fun registerQscScanReceiver() {
     val filter = IntentFilter()
     filter.addAction("com.android.NYX_QSC_DATA")
-    reactContext.registerReceiver(qscReceiver, filter)
+    reactContext.registerReceiver(qscReceiver, filter, Context.RECEIVER_EXPORTED);
   }
 
   private fun unregisterQscReceiver() {
